@@ -1,5 +1,5 @@
 name: "Globalping Network Diagnostics"
-version: "1.0.0"
+version: "1.0.1"
 slug: "globalping"
 description: "Run network diagnostics (ping, traceroute, DNS lookups) from a globally distributed network of probes"
 url: "https://globalping.io/"
@@ -43,9 +43,6 @@ map:
 
 environment:
   LOG_FORMAT: "{LEVEL}: {MESSAGE}"
-
-# Build locally instead of pulling from registry
-# image: "ghcr.io/robbo600/ha-globalping-addon-{arch}"
 
 panel_icon: "mdi:earth"
 panel_title: "Globalping"
