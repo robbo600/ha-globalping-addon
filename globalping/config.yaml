@@ -1,0 +1,57 @@
+name: "Globalping Network Diagnostics"
+version: "1.0.0"
+slug: "globalping"
+description: "Run network diagnostics (ping, traceroute, DNS lookups) from a globally distributed network of probes"
+url: "https://globalping.io/"
+arch:
+  - aarch64
+  - amd64
+  - armhf
+  - armv7
+  - i386
+
+startup: services
+boot: auto
+
+init: false
+privileged:
+  - NET_ADMIN
+
+ports:
+  "8080/tcp": 8080
+
+ports_description:
+  "8080/tcp": "Web interface for Globalping"
+
+options:
+  api_token: ""
+  adoption_token: ""
+  default_location: "world"
+  web_interface: true
+  log_level: "info"
+
+schema:
+  api_token: "str?"
+  adoption_token: "str?"
+  default_location: "str"
+  web_interface: "bool"
+  log_level: "list(debug|info|warn|error)"
+
+map:
+  - share:rw
+  - ssl
+
+environment:
+  LOG_FORMAT: "{LEVEL}: {MESSAGE}"
+
+services:
+  - globalping:ping
+  - globalping:traceroute
+  - globalping:dns_lookup
+  - globalping:http_test
+
+image: "ghcr.io/robbo600/ha-globalping-addon-{arch}"
+
+panel_icon: "mdi:earth"
+panel_title: "Globalping"
+panel_admin: false
