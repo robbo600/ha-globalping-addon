@@ -43,11 +43,13 @@ log_level: "info"         # Log level (debug, info, warn, error)
 
 Access the Globalping web interface at `http://homeassistant.local:8080` (or your Home Assistant IP with port 8080).
 
-### Home Assistant Services
+### Home Assistant Services (Coming Soon)
 
-The add-on exposes several services for use in automations:
+*Note: Home Assistant service integration is planned for a future update. Currently, you can use the web interface for testing.*
 
-#### `globalping.ping`
+The add-on will expose several services for use in automations:
+
+#### `globalping.ping` (Future)
 Run ping tests from specified locations.
 
 ```yaml
@@ -58,7 +60,7 @@ data:
   count: 4
 ```
 
-#### `globalping.traceroute`
+#### `globalping.traceroute` (Future)
 Perform traceroute from specified locations.
 
 ```yaml
@@ -68,7 +70,7 @@ data:
   location: "us-east"
 ```
 
-#### `globalping.dns_lookup`
+#### `globalping.dns_lookup` (Future)
 DNS resolution from different locations.
 
 ```yaml
@@ -79,7 +81,9 @@ data:
   record_type: "A"
 ```
 
-### Automation Example
+### Automation Example (Future)
+
+*This example will work once Home Assistant service integration is implemented.*
 
 Monitor your website's availability from multiple locations:
 

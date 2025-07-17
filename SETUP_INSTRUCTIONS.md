@@ -81,12 +81,12 @@ log_level: "info"          # Logging level
 **Web Interface:**
 - Access at: `http://homeassistant.local:8080`
 - Run manual network tests with an easy-to-use interface
+- Test types: ping, traceroute, DNS lookup, HTTP tests
 
-**Home Assistant Services:**
-- `globalping.ping` - Ping tests
-- `globalping.traceroute` - Traceroute diagnostics
-- `globalping.dns_lookup` - DNS resolution testing
-- `globalping.http_test` - HTTP endpoint testing
+**Home Assistant Services (Future):**
+- Service integration planned for future update
+- Will include `globalping.ping`, `globalping.traceroute`, etc.
+- Currently use web interface for testing
 
 **Example Automation:**
 ```yaml

@@ -44,12 +44,6 @@ map:
 environment:
   LOG_FORMAT: "{LEVEL}: {MESSAGE}"
 
-services:
-  - globalping:ping
-  - globalping:traceroute
-  - globalping:dns_lookup
-  - globalping:http_test
-
 image: "ghcr.io/robbo600/ha-globalping-addon-{arch}"
 
 panel_icon: "mdi:earth"

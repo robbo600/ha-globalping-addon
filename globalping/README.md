@@ -94,11 +94,13 @@ The interface allows you to:
 - Choose location
 - View real-time results
 
-### Home Assistant Services
+### Home Assistant Services (Coming Soon)
 
-The add-on provides several services for use in automations:
+*Note: Home Assistant service integration is planned for a future update. Currently, you can use the web interface for testing.*
 
-#### Service: `globalping.ping`
+The add-on will provide several services for use in automations:
+
+#### Service: `globalping.ping` (Future)
 
 ```yaml
 service: globalping.ping
@@ -108,7 +110,7 @@ data:
   count: 4
 ```
 
-#### Service: `globalping.traceroute`
+#### Service: `globalping.traceroute` (Future)
 
 ```yaml
 service: globalping.traceroute
@@ -117,7 +119,7 @@ data:
   location: "us-west"
 ```
 
-#### Service: `globalping.dns_lookup`
+#### Service: `globalping.dns_lookup` (Future)
 
 ```yaml
 service: globalping.dns_lookup
@@ -127,7 +129,7 @@ data:
   record_type: "A"
 ```
 
-#### Service: `globalping.http_test`
+#### Service: `globalping.http_test` (Future)
 
 ```yaml
 service: globalping.http_test
@@ -136,7 +138,9 @@ data:
   location: "north-america"
 ```
 
-### Automation Examples
+### Automation Examples (Future)
+
+*These examples will work once Home Assistant service integration is implemented.*
 
 #### Monitor Website Availability
 
