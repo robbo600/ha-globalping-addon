@@ -44,7 +44,8 @@ map:
 environment:
   LOG_FORMAT: "{LEVEL}: {MESSAGE}"
 
-image: "ghcr.io/robbo600/ha-globalping-addon-{arch}"
+# Build locally instead of pulling from registry
+# image: "ghcr.io/robbo600/ha-globalping-addon-{arch}"
 
 panel_icon: "mdi:earth"
 panel_title: "Globalping"

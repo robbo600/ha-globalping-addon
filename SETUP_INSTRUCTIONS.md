@@ -12,6 +12,7 @@ ha-globalping-addon/
 ├── SETUP_INSTRUCTIONS.md        # This file
 └── globalping/                  # Add-on directory
     ├── config.yaml              # Add-on configuration
+    ├── build.yaml               # Build configuration
     ├── Dockerfile               # Container build instructions
     ├── README.md                # Add-on documentation
     ├── CHANGELOG.md             # Version history
@@ -105,10 +106,37 @@ automation:
 ### 6. Troubleshooting
 
 **Common Issues:**
-- Repository not appearing: Ensure it's public and has correct structure
-- Add-on won't start: Check logs in Home Assistant
-- Web interface not accessible: Verify port 8080 is not blocked
-- Services not working: Ensure Globalping API is accessible
+
+**Repository not appearing:**
+- Ensure it's public and has correct structure
+- Check that `repository.yaml` exists at the root
+- Verify GitHub URL is correct
+
+**Add-on won't install:**
+- The add-on builds locally, so installation may take 5-10 minutes
+- Check Home Assistant supervisor logs for build progress
+- Ensure sufficient disk space (at least 2GB free)
+
+**Add-on won't start:**
+- Check add-on logs in Home Assistant
+- Verify configuration is valid YAML
+- Ensure ports aren't conflicting
+
+**Web interface not accessible:**
+- Verify port 8080 is not blocked by firewall
+- Check if another service is using port 8080
+- Try accessing via IP address instead of hostname
+
+**Services not working:**
+- Ensure Globalping API is accessible from your network
+- Check if API token is valid (if provided)
+- Verify internet connectivity from Home Assistant
+
+**Build Issues:**
+- The first install builds the Docker image locally
+- This can take 10-15 minutes depending on your hardware
+- Check supervisor logs for detailed build output
+- Ensure Home Assistant has internet access to download packages
 
 **Getting Help:**
 - Check add-on logs in Home Assistant
